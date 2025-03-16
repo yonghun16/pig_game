@@ -67,12 +67,12 @@ body {
 
 .stage__left--selected {
   opacity: 0.7;
-  transition: opacity 1.5s ease;
+  transition: opacity 1.0s ease;
   font-weight: bold;
 }
 
 .stage__right--selected {
-  transition: opacity 1.5s ease;
+  transition: opacity 1.0s ease;
   opacity: 0.7;
   font-weight: bold;
 }
