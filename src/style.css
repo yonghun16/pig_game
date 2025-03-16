@@ -29,8 +29,10 @@ body {
   width: 50%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
   opacity: 0.5;
 }
 
@@ -41,10 +43,68 @@ body {
   border-radius: 0 0.5em 0.5em 0;
 }
 
+
+.stage__left__wrapper,
+.stage__right__wrapper {
+  height: 50vh;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.stage__left__top,
+.stage__right__top {
+  min-height: 250px;
+}
+
 .stage__left--selected {
+  opacity: 0.7;
+  font-weight: bold;
+}
+
+.stage__right--selected {
   opacity: 0.7;
 }
 
+.stage__left__player-name,
+.stage__right__player-name {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.stage__left__score,
+.stage__right__score {
+  font-size: 4rem;
+  text-align: center;
+  color: #C7365F;
+}
+
+.stage__left__current-box,
+.stage__right__current-box {
+  background: #C8365F;
+  width: 200px;
+  height: 110px;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  color: white;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+.stage__left__dice,
+.stage__right__dice {
+  margin-top: 1rem;
+  font-size: 2.5rem;
+}
 
 /* buttons */
 .buttons {
@@ -52,6 +112,14 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.buttons-wrapper {
+  height: 50vh;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .button__new-game,
@@ -84,8 +152,13 @@ body {
 }
 
 .button__new-game {
-  margin-bottom: 35vh;
+  margin-top: 1rem;
 }
 .button__roll-dice {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
+
+.button__hold {
+  margin-bottom: 1rem;
+}
+
