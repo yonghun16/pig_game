@@ -5,28 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon-B8e13pnG.ico" />
     <title>Pig Game</title>
-    <script type="module" crossorigin src="/assets/index-BiZxJ08-.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-f26GMu4o.css">
+    <script type="module" crossorigin src="/assets/index-3yWFVJyR.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B2rrVnjV.css">
   </head>
   <body>
     
 <div class="stage">
   <div class="stage__left stage__left--selected">
-    <div class="stage__left__player-name"></div>
-    <div class="stage__left__score"></div>
-    <div class="stage__left__current"></div>
-    <div class="stage__left__dice"></div>
+    <div class="stage__left__wrapper">
+      <div class="stage__left__top">
+        <div class="stage__left__result"></div>
+        <div class="stage__left__player-name">player 1</div>
+        <div class="stage__left__score">0</div>
+      </div>
+      <div class="stage__left__pig stage__left__pig--pig1"></div>
+      <div class="stage__left__bottom">
+        <div class="stage__left__current-box">
+          <div class="current">current</div>
+          <div class="stage__left__dice">0</div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="stage__right">
-    <div class="stage__right__player-name"></div>
-    <div class="stage__right__score"></div>
-    <div class="stage__right__current"></div>
-    <div class="stage__right__dice"></div>
+    <div class="stage__left__wrapper">
+      <div class="stage__right__top">
+        <div class="stage__right__result"></div>
+        <div class="stage__right__player-name">player 2</div>
+        <div class="stage__right__score">0</div>
+      </div>
+      <div class="stage__right__pig stage__right__pig--pig1"></div>
+      <div class="stage__right__bottom">
+        <div class="stage__right__current-box">
+          <div class="current">current</div>
+          <div class="stage__right__dice">0</div>
+        </div>
+      </div>
+    </div>
   </div>
   <div class="buttons">
-    <div class="button__new-game">🔄 New game</div>
-    <div class="button__roll-dice">🎲 Roll dice</div>
-    <div class="button__hold">📥 hold</div>
+    <div class="buttons-wrapper">
+      <div class="button__new-game">🔄 New game</div>
+      <div class="dice dice--dice1"></div>
+      <div class="button__play-button">
+        <div class="button__roll-dice">🎲 Roll dice</div>
+        <div class="button__hold">📥 hold</div>
+      </div>
+    </div>
   </div>
 </div>
   </body>
