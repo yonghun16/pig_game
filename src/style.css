@@ -33,12 +33,13 @@ body {
   justify-content: center;
   align-items: center;
   text-transform: uppercase;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 .stage__left {
   border-radius: 0.5em 0 0 0.5em;
 }
+
 .stage__right {
   border-radius: 0 0.5em 0.5em 0;
 }
@@ -52,22 +53,64 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+
 }
 
 
 .stage__left__top,
 .stage__right__top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 250px;
 }
 
 .stage__left--selected {
   opacity: 0.7;
+  transition: opacity 1.5s ease;
   font-weight: bold;
 }
 
 .stage__right--selected {
+  transition: opacity 1.5s ease;
   opacity: 0.7;
+  font-weight: bold;
 }
+
+.stage__left__result,
+.stage__right__result {
+  height: 40px;
+}
+
+.stage__left--win,
+.stage__right--win {
+  background:#2F2F2F;
+  transition: opacity 1.5s ease;
+  opacity: 1.0;
+}
+.stage__left--win {
+  .stage__left__player-name{
+    color: #C7365F;
+  }
+  .stage__left__result {
+    width: 55px;
+    height: 60px;
+    background-image: url('./assets/win.png');
+  }
+}
+.stage__right--win {
+  .stage__right__player-name{
+    color: #C7365F;
+  }
+  .stage__right__result {
+    width: 55px;
+    height: 60px;
+    background-image: url('./assets/win.png');
+  }
+}
+
+
+
 
 .stage__left__player-name,
 .stage__right__player-name {
@@ -87,8 +130,8 @@ body {
 
 .stage__left__current-box,
 .stage__right__current-box {
-  background: #C8365F;
-  width: 200px;
+  background: #C7365F;
+  width: 180px;
   height: 110px;
   border-radius: 0.5em;
   display: flex;
@@ -100,6 +143,7 @@ body {
   margin: auto;
   margin-bottom: 1rem;
 }
+
 .stage__left__dice,
 .stage__right__dice {
   margin-top: 1rem;
@@ -113,6 +157,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .buttons-wrapper {
   height: 50vh;
   min-height: 380px;
@@ -136,7 +181,8 @@ body {
   border-radius: 1.5em;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: transform 0.3s ease;
+  user-select: none;
+  transition: transform 0.2s ease;
 }
 
 .button__new-game:hover,
@@ -154,6 +200,7 @@ body {
 .button__new-game {
   margin-top: 1rem;
 }
+
 .button__roll-dice {
   margin-bottom: 1rem;
 }
@@ -162,3 +209,29 @@ body {
   margin-bottom: 1rem;
 }
 
+.dice {
+  width: 90px;
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+  transform: translateY(0px);
+}
+
+.dice--dice1 {
+  background-image: url('./assets/red_dice/dice-1.png');
+}
+.dice--dice2 {
+  background-image: url('./assets/red_dice/dice-2.png');
+}
+.dice--dice3 {
+  background-image: url('./assets/red_dice/dice-3.png');
+}
+.dice--dice4 {
+  background-image: url('./assets/red_dice/dice-4.png');
+}
+.dice--dice5 {
+  background-image: url('./assets/red_dice/dice-5.png');
+}
+.dice--dice6 {
+  background-image: url('./assets/red_dice/dice-6.png');
+}
