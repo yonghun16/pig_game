@@ -5,6 +5,8 @@ const btnHold = document.querySelector('.button__hold');
 
 const stageLeft = document.querySelector('.stage__left');
 const stageRight = document.querySelector('.stage__right');
+const stageLeftPig = document.querySelector('.stage__left__pig');
+const stageRightPig = document.querySelector('.stage__right__pig');
 const leftSelected = document.querySelector('.stage__left--selected');
 const rightSelected = document.querySelector('.stage__right--selected');
 
@@ -13,19 +15,15 @@ class Player {
   constructor(score, current, side) {
     this.score = score;
     this.current = current;
-    if (side === stageLeft) {
-      this.currentElement = document.querySelector('.stage__left__dice');
-      this.scoreElement = document.querySelector('.stage__left__score');
-    }
-    else {
-      this.currentElement = document.querySelector('.stage__right__dice');
-      this.scoreElement = document.querySelector('.stage__right__score');
-    }
+    this.side = side;
+    this.currentElement = document.querySelector(`.stage__${this.side}__dice`);
+    this.scoreElement = document.querySelector(`.stage__${this.side}__score`);
+    this.pigElement = document.querySelector(`.stage__${this.side}__pig`);
   }
 }
 
-const playerLeft = new Player(0, 0, stageLeft);
-const playerRight = new Player(0, 0, stageRight);
+const playerLeft = new Player(0, 0, 'left');
+const playerRight = new Player(0, 0, 'right');
 
 
 let player = playerLeft;
@@ -67,7 +65,8 @@ const holdScore = () => {
   player.scoreElement.textContent = player.score;
   player.current = 0;
   player.currentElement.textContent = player.current;
-  if (player.score >= 10) {
+
+  if (player.score >= 100) {
     if (player === playerLeft) {
       stageLeft.classList.remove('stage__left--selected');
       stageLeft.classList.add('stage__left--win');
@@ -76,9 +75,33 @@ const holdScore = () => {
       stageRight.classList.add('stage__right--win');
     }
     playing = false;
+    player.pigElement.className = `stage__${player.side}__pig`;
+    player.pigElement.classList.add(`stage__${player.side}__pig--pig5`);
+    return;
   }
-  else {
+  else if (player.score >= 75) {
+    player.pigElement.className = `stage__${player.side}__pig`;
+    player.pigElement.classList.add(`stage__${player.side}__pig--pig4`);
     changePlayer();
+    return;
+  }
+  else if (player.score >= 50) {
+    player.pigElement.className = `stage__${player.side}__pig`;
+    player.pigElement.classList.add(`stage__${player.side}__pig--pig3`);
+    changePlayer();
+    return;
+  }
+  else if (player.score >= 25) {
+    player.pigElement.className = `stage__${player.side}__pig`;
+    player.pigElement.classList.add(`stage__${player.side}__pig--pig2`);
+    changePlayer();
+    return;
+  }
+  else if (player.score >= 0) {
+    player.pigElement.className = `stage__${player.side}__pig`;
+    player.pigElement.classList.add(`stage__${player.side}__pig--pig1`);
+    changePlayer();
+    return;
   }
 };
 
@@ -88,6 +111,8 @@ const newGame = () => {
     player.current = 0;
     player.currentElement.textContent = player.current;
     player.scoreElement.textContent = player.score;
+    player.pigElement.className = `stage__${player.side}__pig`;
+    player.pigElement.classList.add(`stage__${player.side}__pig--pig1`);
     changePlayer();
   }
   stageLeft.classList.remove('stage__left--win');

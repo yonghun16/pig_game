@@ -47,13 +47,13 @@ body {
 
 .stage__left__wrapper,
 .stage__right__wrapper {
-  height: 50vh;
-  min-height: 380px;
+  height: 53vh;
+  min-height: 480px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
+  margin-top: 20px;
 }
 
 
@@ -62,7 +62,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 250px;
+  margin: 0;
 }
 
 .stage__left--selected {
@@ -117,8 +117,8 @@ body {
   font-size: 2.5rem;
   text-align: center;
   color: #333333;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
 }
 
 .stage__left__score,
@@ -132,7 +132,7 @@ body {
 .stage__right__current-box {
   background: #C7365F;
   width: 180px;
-  height: 110px;
+  height: 90px;
   border-radius: 0.5em;
   display: flex;
   flex-direction: column;
@@ -146,9 +146,53 @@ body {
 
 .stage__left__dice,
 .stage__right__dice {
-  margin-top: 1rem;
   font-size: 2.5rem;
 }
+
+.stage__left__pig,
+.stage__right__pig {
+  width: 200px;
+  height: 171px;
+}
+
+.stage__right__pig--pig1{
+  background-image: url('./assets/pig/pig1.png');
+}
+.stage__right__pig--pig2{
+  background-image: url('./assets/pig/pig2.png');
+}
+.stage__right__pig--pig3{
+  background-image: url('./assets/pig/pig3.png');
+}
+.stage__right__pig--pig4{
+  background-image: url('./assets/pig/pig4.png');
+}
+.stage__right__pig--pig5{
+  background-image: url('./assets/pig/pig5.png');
+}
+
+.stage__left__pig--pig1{
+  background-image: url('./assets/pig/pig1.png');
+  transform: scaleX(-1);
+}
+.stage__left__pig--pig2{
+  background-image: url('./assets/pig/pig2.png');
+  transform: scaleX(-1);
+}
+.stage__left__pig--pig3{
+  background-image: url('./assets/pig/pig3.png');
+  transform: scaleX(-1);
+}
+.stage__left__pig--pig4{
+  background-image: url('./assets/pig/pig4.png');
+  transform: scaleX(-1);
+}
+.stage__left__pig--pig5{
+  background-image: url('./assets/pig/pig5.png');
+  transform: scaleX(-1);
+}
+
+
 
 /* buttons */
 .buttons {
@@ -159,8 +203,8 @@ body {
 }
 
 .buttons-wrapper {
-  height: 50vh;
-  min-height: 380px;
+  height: 55vh;
+  min-height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
