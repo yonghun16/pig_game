@@ -2,7 +2,7 @@
 
   ![header](https://capsule-render.vercel.app/api?type=waving&color=4078c0&height=180&section=header&text=Pig%20Game%20-%20Clone&fontSize=45&animation=fadeIn&fontAlignY=38&desc=yonghun16&descAlignY=55&descAlign=85)
 
-  <a href="http://140.238.9.24:8002/"><img src="https://github.com/yonghun16/pig_game/blob/main/preview.jpg?raw=true" width=800px /></a>
+  <a href="https://pig-game-ten-neon.vercel.app/"><img src="https://github.com/yonghun16/pig_game/blob/main/preview.jpg?raw=true" width=800px /></a>
 	
 </div>
 
